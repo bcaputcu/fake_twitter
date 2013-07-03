@@ -1,0 +1,37 @@
+@import "bootstrap";
+body {
+	background-image:image_url("paper.png");
+}
+.hero-unit {
+	background-color: #f5f5f5;
+}
+.span-half {
+	width:35;
+}
+.results section {
+	border-bottom: 1px solid #848484;
+}
+.results a {
+	vertical-align: middle;
+}
+.result-part {
+	margin:10px;
+	overflow:hidden;
+	padding-bottom:5px;
+}
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #E1E1E1;
+}
+@import "bootstrap-responsive";
+.center { 
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+body .modal-course-join {
+    /* new custom width */
+    width: 750px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -375px;
+}
