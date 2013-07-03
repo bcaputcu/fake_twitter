@@ -1,16 +1,19 @@
 <% if user_signed_in? %>
 
 <%= simple_form_for(@tweet, :url=>'/tweets/create') do |f| %>
-	<%= f.input :message, :autofocus => true %>
-	<%= f.button :submit, :class => "btn-primary" %>
+<%= f.input :message, :autofocus => true %>
+<%= f.button :submit, :class => "btn-primary" %>
 <% end %>
 
-<% current_user.foll.tweets.each do |tweet| %>
-	<div class="well span3">
-		<%= link_to tweet.user.email, "#" %> <br>
-		<%= tweet.message %>
-	</div>
+<% @followed_tweets.each do |tweet| %>
+<div class="well span3">
+	<%= link_to tweet.user.email, "/user/#{tweet.user_id}" %> <br>
+	<%= tweet.created_at %> <br>
+	<%= tweet.message %>
+</div>
 <% end %>
+
+<%=  %>
 
 <% else %>
 

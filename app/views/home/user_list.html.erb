@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
-	<%= form_tag "relationships/create" do %>
+	<%= form_tag "/relationships/create" do %>
 		<%= user.email %>
-		<% hidden_field_tag "followed_id", user.id %>
+		<%= hidden_field_tag "followed_id", user.id %>
 		<% unless current_user.following? user %>
 		<%= submit_tag "Follow" %>
 		<% end %>
